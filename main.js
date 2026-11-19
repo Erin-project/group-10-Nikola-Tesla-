@@ -22,17 +22,41 @@ function TextBoxPage() {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         minHeight: "100vh",
-        padding: "20px"
+        margin: 0,
+        display: "flex",
+        justifyContent: "center", // centers horizontally
+        alignItems: "center"      // centers vertically
       }
     },
     React.createElement(
       "form",
-      null,
+      {
+        style: {
+          display: "flex",
+          gap: "10px" // adds a small space between the input and button
+        }
+      },
       React.createElement("input", {
         type: "text",
-        placeholder: "Type your message..."
+        placeholder: "Type your message...",
+        style: {
+          padding: "10px 14px",
+          fontSize: "16px",
+          width: "300px"
+        }
       }),
-      React.createElement("button", { type: "submit" }, "Send")
+      React.createElement(
+        "button",
+        {
+          type: "submit",
+          style: {
+            padding: "10px 18px",
+            fontSize: "16px",
+            cursor: "pointer"
+          }
+        },
+        "Send"
+      )
     )
   );
 }
