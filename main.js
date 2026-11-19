@@ -7,10 +7,22 @@ const app = express();
 
 app.use(cors());
 
+// Serve files in the repo folder so /background.png loads in the browser
+app.use(express.static("."));
+
 function TextBoxPage() {
   return React.createElement(
     "div",
-    { style: { backgroundColor: "#ffffff", minHeight: "100vh", padding: "20px" } },
+    {// sets background image 
+      style: {
+        backgroundImage: "url('/background.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        minHeight: "100vh",
+        padding: "20px"
+      }
+    },
     React.createElement(
       "form",
       null,
