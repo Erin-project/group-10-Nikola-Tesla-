@@ -72,13 +72,13 @@ function TextBoxPage() {
           "aria-label":"Send message",
             style: {
             height: "48px",
-            padding: "10 10px",
+            padding: "14 14px",
             fontSize: "15px",
             cursor: "pointer",
             colour: "#fafafa",
-            backgroundColor: "rgba(255, 255, 255, 0.65)",
+            backgroundColor: "rgba(173, 216, 230, 0.65)",
             border: "2px solid #29b6f6",
-            borderRadius: "20px",
+            borderRadius: "22px",
             display: "flex",
             flexshrink: 0,
           }
