@@ -10,10 +10,12 @@ app.use(cors());
 // Serve files in the repo folder so /background.png loads in the browser
 app.use(express.static("."));
 
+
+// sets background image 
 function TextBoxPage() {
   return React.createElement(
     "div",
-    {// sets background image 
+    {
       style: {
         backgroundImage: "url('/background.png')",
         backgroundSize: "cover",
@@ -35,13 +37,19 @@ function TextBoxPage() {
   );
 }
 
+
+//gets the text box
 app.get("/", (req, res) => {
   res.send(renderToString(React.createElement(TextBoxPage)));
 });
 
+
+//creates the text box
 app.get("/chat", (req, res) => {
   res.send(renderToString(React.createElement(TextBoxPage)));
 });
+
+
 
 app.listen(3000, () => {
   console.log("Tesla Bot running at http://localhost:3000");
