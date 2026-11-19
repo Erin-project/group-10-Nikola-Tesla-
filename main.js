@@ -76,6 +76,7 @@ function TextBoxPage() {
             fontSize: "15px",
             cursor: "pointer",
             colour: "#fafafa",
+            backgroundColor: "rgba(24, 168, 197, 0.72)",
             backgroundColor: "rgba(173, 216, 230, 0.65)",
             border: "2px solid #29b6f6",
             borderRadius: "22px",
